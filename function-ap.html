@@ -1,4 +1,28 @@
-// Task 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Assignment Practice</title>
+</head>
+<body>
+  
+  <h1>JavaScript Class 3: About Function</h1> 
+  <h2>Total Count 1st Button Clieked</h2>
+  <button id="button1">Button 1</button>
+  <!-- <button id="button1" onclick="countButtonFirstClick()">Button 1</button> -->
+   <!-- <button id="button1" onclick="countButtonClicked('button1')">Button 1</button> -->
+  <p>Button 1 Clicked Count: <span id="firstOutput">0</span></p>
+
+  <h2>Total Count 2nd Button Clieked</h2>
+  <button id="button2">Button 2</button>
+  <!-- <button id="button2" onclick="countButtonSecondClick()">Button 2</button> -->
+   <!-- <button id="button2" onclick="countButtonClicked('button2')">Button 2</button> -->
+  <p>Button 2 Clicked Count: <span id="secondOutput">0</span></p>
+
+<!-- JavaScript Class 3: About Function -->
+      <script>
+        // Task 1
 // Create a simple function with name firstFunction().
 // and store the value in console ('This is my first function')
 // and call the function firstFunction().
@@ -51,7 +75,7 @@ var resultCap = convertUpperCase("hello javascript");
 console.log(resultCap);
 
 // Task 2
-// Create a function which has a parameter and converts the first letter of each word 
+// Create a function which has a parameter and converts the first letter of each word
 // into upper case and Return New String
 
 function allFirstLetterUpperCase(str){
@@ -84,7 +108,7 @@ console.log(resultSum);
 // Task 4
 // create 2 Buttons
 // => "Button 1" => "Button 2"
-// we need to record how many times user has click both buttons and show clicked counter 
+// we need to record how many times user has click both buttons and show clicked counter
 // in the p tag
 // **********************************************/
 var buttonIdFirst = document.getElementById('button1');
@@ -131,7 +155,7 @@ buttonIdSecond.addEventListener('click', function (){
 // Task 5
 // Create a function with a parameter which will tell you DataType
 //  of any parametr value you passed to the function
-// Ex: testFun("Chetan") output: string, testFun(12) output: number, 
+// Ex: testFun("Chetan") output: string, testFun(12) output: number,
 // testFun({}) output: object, testFun([]) output: array
 //  ********************************/
 
@@ -153,4 +177,6 @@ console.log(dataTypeResult);
 var dataTypeResult = findDataType({name:'barique',city:'purnea'});
 console.log(dataTypeResult);
 
-
+      </script>
+</body>
+</html>

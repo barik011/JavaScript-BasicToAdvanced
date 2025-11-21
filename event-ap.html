@@ -9,28 +9,18 @@
 </head>
 
 <body>
-    <script>
-        function showAlert() {
-            alert('Hello Javascript')
-        }
-        function showInputText() {
-            alert('You have pressed a key inside text input!')
-        }
-        var ddContainer=document.getElementById('ddValue');
-        function getDropdownValue(){
-            
-            var selectVal = event.target.value;
-            console.log1(selectVal);
-        }
-    </script>
+    
     <div class="container">
         <div class="row mt-3">
+            <!-- // Task 1 (Click Event) -->
             <div class="col-3">
                 <button type="button" class="btn btn-primary" onclick="showAlert()">Click Me</button>
             </div>
+            <!-- // Task 3 (Keydown Event) -->
             <div class="col-3">
                 <input type="text" onkeydown="showInputText()" />
             </div>
+            <!-- // Task 4 (Change Event) -->
             <div class="col-3">
                 <select class="form-select" onchange="getDropdownValue()">
                     <option id="org" value="Orange">Orange</option>
@@ -42,7 +32,48 @@
             </div>
             <div class="col-3"></div>
         </div>
+        <div class="row">
+            <div class="col-6">
+                <button id="firstButton" class="btn btn-success" showButtonValue('Button 1')>Button 1</button>
+                <button id="secondButton" class="btn btn-success" onclick="showButtonValue('Button 2')">Button 2</button>
+                <button id="thirdButton" class="btn btn-success" onclick="showButtonValue('Button 3')">Button 3</button>
+            </div>
+            <div class="col-6"></div>
+        </div>
     </div>
+
+    <script>
+    // Task 1 (Click Event)
+    // Create on button Click Me. 
+    // On the click on button showcase alert with text Hello Javascript 
+        function showAlert() {
+            alert('Hello Javascript')
+        }
+
+    // Task 3 (Keydown Event)
+    // Take a one textbox and apply Keydown event in that textbox
+    // On the click on textbox you have to showcase alert box and show the message (You have pressed a key inside text input!)
+
+        function showInputText() {
+            alert('You have pressed a key inside text input!')
+        }
+
+    // Task 4 (Change Event)
+    // Create a dropdown with options of fruits
+    // add on change event and show selected value in strong tag
+
+        var ddContainer=document.getElementById('ddValue');
+        function getDropdownValue(){            
+            var selectVal = event.target.value;
+            ddContainer.innerText=selectVal;
+        }
+
+    // Task 6 (Click Event)
+    // Take a three button click on button and show one alert 
+    function showButtonValue(buttonName){
+        alert(buttonName+' Clicked');
+    }
+    </script>
 </body>
 
 </html>

@@ -163,20 +163,46 @@ function findDataType(param){
     return typeof(param);
 }
 var dataTypeResult = findDataType('aa');
-console.log(dataTypeResult);
+console.log('Type of aa: ', dataTypeResult);
 
 var dataTypeResult = findDataType(123);
-console.log(dataTypeResult);
+console.log('Type of 123: ', dataTypeResult);
 
 var dataTypeResult = findDataType(false);
-console.log(dataTypeResult);
+console.log('Type of True/False: ', dataTypeResult);
 
 var dataTypeResult = findDataType(['a','b','c']);
-console.log(dataTypeResult);
+console.log('Type of []: ', dataTypeResult);
 
 var dataTypeResult = findDataType({name:'barique',city:'purnea'});
-console.log(dataTypeResult);
+console.log('Type of {}: ', dataTypeResult);
 
-      </script>
+
+// Task 6
+// Create a function which have 2 parameter - write logic to check if both parameter has same value
+//  n if yes return true else return false
+// Ex: testFun("Chetan","Chetan") output: true, testFun(12,"12") output: false, testFun(12,12) 
+// output: true
+
+function twoValueCheck(val1,val2){
+    if(val1===val2){
+        return true
+    }
+    else{
+        return false
+    }
+}
+var result = twoValueCheck(12,'12')
+console.log('Type Compare of Two Number(12,"12"): ',result);
+
+// Task 7
+// Create a function with parameter to check if value is number or not - return true or false
+// Ex: testFun("Chetan") output: false, testFun(12) output: true, testFun("33") output: true
+function typeCheck(val){
+    return !isNaN(val);
+}
+var result = typeCheck('barik');
+console.log('Not a Number: ', result);
+</script>
 </body>
 </html>

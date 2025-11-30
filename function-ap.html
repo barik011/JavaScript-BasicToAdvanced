@@ -203,6 +203,55 @@ function typeCheck(val){
 }
 var result = typeCheck('barik');
 console.log('Not a Number: ', result);
+
+
+// Task 8
+// Create a fun with 2 paramater which will check if both parameter in number the it will add num
+// and return sum else return msg - "Number Not Found"
+// Ex: testFun("Chetan",23) output: "Number Not Found", testFun(12,12) output: 24
+
+function sumOfNumber(val1,val2){  
+    //debugger;
+    // var val1TypeCheck = !isNaN(val1);
+    // var val2TypeCheck = !isNaN(val2);
+
+    val1TypeCheck = typeof val1 === 'number';
+    val2TypeCheck = typeof val2 === 'number';
+
+    if(val1TypeCheck && val2TypeCheck){
+        var sum = val1 + val2;
+        return sum;
+    }
+    else{
+         return "Number Not Found";
+    }
+}
+var result = sumOfNumber(11,11);
+console.log(result);//22
+var result = sumOfNumber('12',12);
+console.log(result);//1212 using isNaN() //Number Not Found using Typeof()
+var result = sumOfNumber('barik',12);
+console.log(result);//Number Not Found
+
+// Task 9
+// Create a function which has a parameter - if parameter has string data - create an array of words that we have in parameter to this function n return array of string else show alert as "NO String Found"
+// Ex: testFun("This is my Word") output : ["This","is","my","Word"]
+// Ex: testFun("Welcome to My Channel") output : ["Welcome","to","My","Channel"]
+// Ex: testFun(23123) output : "NO String Found"
+
+function convertStrignToArray(str){
+    //debugger;
+    var strTypeCheck = typeof str ==="string";
+    if(strTypeCheck){
+    var arrayStr = str.split(' ')
+    console.log(arrayStr);
+    }
+    else {
+        console.log('No String Found')
+    }
+}
+convertStrignToArray("This is the 4th Class of JavaScript");
+convertStrignToArray(12354);
 </script>
 </body>
 </html>

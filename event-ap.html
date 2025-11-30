@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <div class="container">
         <div class="row mt-3">
             <!-- // Task 1 (Click Event) -->
@@ -34,45 +34,74 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <button id="firstButton" class="btn btn-success" showButtonValue('Button 1')>Button 1</button>
-                <button id="secondButton" class="btn btn-success" onclick="showButtonValue('Button 2')">Button 2</button>
+                <button id="firstButton" class="btn btn-success" onclick="showButtonValue('Button 1')">Button 1</button>
+                <button id="secondButton" class="btn btn-success" onclick="showButtonValue('Button 2')">Button
+                    2</button>
                 <button id="thirdButton" class="btn btn-success" onclick="showButtonValue('Button 3')">Button 3</button>
             </div>
-            <div class="col-6"></div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="firstInput" class="form-control" onchange="addTwoValue()" placeholder="First Input" >
+                    </div>
+                    <div class="col">
+                        <input type="text" id="secondInput" class="form-control" onchange="addTwoValue()" placeholder="Second Input" >
+                    </div>
+                    <div class="col">
+                        <input type="text" id="inputResult" class="form-control col-3" placeholder="Result" readonly />
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
 
     <script>
-    // Task 1 (Click Event)
-    // Create on button Click Me. 
-    // On the click on button showcase alert with text Hello Javascript 
+        // Task 1 (Click Event)
+        // Create on button Click Me. 
+        // On the click on button showcase alert with text Hello Javascript 
         function showAlert() {
             alert('Hello Javascript')
         }
+        // Task 2 (onblur Event or onchange)
+        // Take three textboxes.
+        // Do multiplication of textbox 1 and 2 and store the result in textbox 3.
+            
+        function addTwoValue(){
+            debugger;       
+            var firstVal = document.getElementById('firstInput').value;
+            var secondVal = document.getElementById('secondInput').value;
+            var resultInput = document.getElementById('inputResult');
+            if(firstVal!='' && secondVal !=''){
+                resultInput =firstVal + secondVal;
+                resultInput.value = resultInput;
+            }
+        }
 
-    // Task 3 (Keydown Event)
-    // Take a one textbox and apply Keydown event in that textbox
-    // On the click on textbox you have to showcase alert box and show the message (You have pressed a key inside text input!)
+
+        // Task 3 (Keydown Event)
+        // Take a one textbox and apply Keydown event in that textbox
+        // On the click on textbox you have to showcase alert box and show the message (You have pressed a key inside text input!)
 
         function showInputText() {
             alert('You have pressed a key inside text input!')
         }
 
-    // Task 4 (Change Event)
-    // Create a dropdown with options of fruits
-    // add on change event and show selected value in strong tag
+        // Task 4 (Change Event)
+        // Create a dropdown with options of fruits
+        // add on change event and show selected value in strong tag
 
-        var ddContainer=document.getElementById('ddValue');
-        function getDropdownValue(){            
+        var ddContainer = document.getElementById('ddValue');
+        function getDropdownValue() {
             var selectVal = event.target.value;
-            ddContainer.innerText=selectVal;
+            ddContainer.innerText = selectVal;
         }
 
-    // Task 6 (Click Event)
-    // Take a three button click on button and show one alert 
-    function showButtonValue(buttonName){
-        alert(buttonName+' Clicked');
-    }
+        // Task 6 (Click Event)
+        // Take a three button click on button and show one alert 
+        function showButtonValue(buttonName) {
+            alert(buttonName + ' Clicked');
+        }
     </script>
 </body>
 

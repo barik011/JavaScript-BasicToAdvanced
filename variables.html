@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Example</title>
+    <script>
+        //alert('Script Loaded in Header Part');
+    </script>
+</head>
+<body>
+    <script>
+    // Task 1
+    // create 3 variables to store firstName, middleName, lastName and Generate fullName by joining 3 variable and print
+    // full name in console. 
+    var fName='Mohammad';
+    var mName='Barique';
+    var lName='Quamar';
+    var funnName= fName + " " + mName + " " + lName;
+    console.log('Full Name: ', funnName);
+
+    // create variables to store student details like name, contactNo, FatherName, MotherName, Class,RollNo and print it
+    // in console
+    var studDetail = {
+        name:'Mohammad Barique',
+        contactNo:998899889988,
+        fatherName:'Zahir Uddin',
+        motherName:'Rukhsana',
+        class:'Nursary',
+        rollNo:12,
+    }
+    console.log(studDetail);
+
+    // create variable to store address, city ,state and pincode- and print address and city in console
+    var addressDetail = {
+         address:'Line Bazar',
+         city:'Purnea',
+         state:'Bihar',
+         pincode:854301
+    }
+    console.log('Address: ',addressDetail.address, 'City: ', addressDetail.city )
+    
+    // Task 2
+    // create currentDate variable and store current Date into it and show that in alert popup    
+    var dateValue = new Date()
+    var currDate = dateValue.getDate();
+    alert('Current Date: '+ currDate);
+
+    // create variables to store patient data - name, age, address, contactNo and print name & age in console
+    var patientData = {
+        name:'Shohan',
+        age:22,
+        address:'delhi',
+        contactNo:987576548
+    }
+    console.log('Name: ', patientData.name, ' Age: ', patientData.age);
+
+// Task 4
+// Create 2 variable num1 assign value = 1122, num2 == 3344
+// show both varible in alert popup
+// after alert now replace value of num1 with num2 & num2 with num1
+// now show updated value in alert again
+debugger;
+var num1 = 1122;
+var num2 = 3344;
+alert(num1+" "+num2);
+var repContent=num1;
+num1=num2;
+num2=repContent;
+alert(num1+" "+num2);
+
+
+
+</script>
+ <script>
+    // Task 3
+
+    // create 2 script tag in html page- 1st will be in head part- 2nd will be in body part at the end
+    // in first script tag show alert as script 1 loaded
+    // in 2nd script tag show alert as script 2 loaded
+     //   alert('Script Loaded in Body Part');
+    </script>
+</body>
+</html>

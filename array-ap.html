@@ -9,12 +9,14 @@
 <body>
     <div class="container">
         <div class="row mt-3">
+            <!--Task 3-->
             <div class="col-3"><input type="text" id="studentName" class="form-control" /></div>
             <div class="col-3"><button type="button" class="btn btn-primary" onclick="addToArray()" >Add to Array</button></div>
             <div class="col-3">Current Array: <p id="displayAray"></p></div>
             <div class="col-3"></div>
         </div>
         <div class="row mt-3">
+            <!--Task 4-->
             <h2>Implement push, pop, shift, and unshift operations using buttons</h2>
             <div class="col-2"><input type="text" id="newNumber" class="form-control" /></div>
             <div class="col-2"><button type="button" class="btn btn-primary" onclick="arrayUpdate('push')" >Push</button></div>
@@ -26,11 +28,30 @@
         </div>
 
         <div class="row mt-3">
+            <!--Task 5-->
             <h2>Allow the user to get an element by entering an index number</h2>
-            <div class="col-3"><input type="text" id="indexNumber" class="form-control" /></div>
+            <div class="col-3">
+                <input type="text" id="indexNumber" class="form-control" />
+                <div>[<span id="listArrayVal"></span>]</div>
+            </div>
             <div class="col-3"><button type="button" class="btn btn-primary" onclick="getArrayVal()" >Array Value</button></div>
             <div class="col-3">Current Array: <p id="showArayVal"></p></div>
             <div class="col-3"></div>
+            <hr>
+
+            <!--Task 6-->
+            <h2>Add a button to print the length of the array in a strong tag</h2>
+            <div class="col-3"><button type="button" class="btn btn-primary" onclick="onArrayLength()" >Array Value</button></div>
+            <div class="col-3">Length of Array: <p id="showArayLength"></p></div>
+            
+             <!--Task 6-->
+            <h2>Add entered City to a dropdown, Ensure no duplicate cities are allowed, Show the count of cities</h2>
+            <div class="col-3">
+                <input type="text" id="inputCity" placeholder="Enter city" class="form-control" />
+            </div>
+            <div class="col-3"><button type="button" class="btn btn-primary" onclick="onArrayLength()" >Array Value</button></div>
+            <div class="col-3">Length of Array: <p id="showArayLength"></p></div>
+            
         </div>
     </div>
     <script>
@@ -73,6 +94,8 @@
     // Task 4
     // Create an array of Numbers
     // Implement push, pop, shift, and unshift operations using buttons
+
+    // Approach------2
     var numberArray = [11,112,113,114,115,116,117,118];
     console.log(numberArray);
     function arrayUpdate(changes){
@@ -139,12 +162,31 @@
      Allow the user to get an element by entering an index number
      *******************************************/
     var rollNumbers = [1,2,3,45,55,66,77,22,32,23];
+    document.getElementById('listArrayVal').innerText= rollNumbers;
     function getArrayVal(){
         var indexNumber = document.getElementById('indexNumber').value;
         var getVal = rollNumbers[indexNumber];
-
+        var showArayVal = document.getElementById('showArayVal');
+        showArayVal.innerText = getVal;
     }
-    
+
+    /***********************************************************
+        Task 6
+        Create an array of RollNos
+        Add a button to print the length of the array in a strong tag
+    *******************************************************/
+   function onArrayLength(){
+        document.getElementById('showArayLength').innerText = rollNumbers.length;
+   }
+
+
+   /***********************************************************
+    Task 7
+    Add entered City to a dropdown
+    Ensure no duplicate cities are allowed
+    Show the count of cities
+    *******************************************************/
+
 
     </script>
 </body>
